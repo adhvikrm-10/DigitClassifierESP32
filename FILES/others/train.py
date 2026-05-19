@@ -8,7 +8,6 @@ from sklearn.metrics import accuracy_score, classification_report
 digits = load_digits()          
 X = digits.data / 16.0          
 y = digits.target               
-
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
@@ -28,7 +27,6 @@ y_pred = mlp.predict(X_test)
 acc = accuracy_score(y_test, y_pred)
 print(f"[✓] Test Accuracy : {acc * 100:.2f}%\n")
 print(classification_report(y_test, y_pred, digits=2))
-
 W1 = mlp.coefs_[0]        
 b1 = mlp.intercepts_[0]   
 W2 = mlp.coefs_[1]        
