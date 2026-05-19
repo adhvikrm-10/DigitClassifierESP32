@@ -1,7 +1,6 @@
 import time
 import tkinter as tk
 from tkinter import ttk, messagebox
-
 import numpy as np
 import serial
 import serial.tools.list_ports
@@ -13,17 +12,14 @@ GRID_SIZE   = 8
 SEND_MARKER = 0xFF             
 CORRECT_CMD = 0xFE             
 
-
 class DigitDrawerApp:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
         self.root.title("8×8 Digit Drawer — ESP32 Perceptron Inference")
         self.root.resizable(False, False)
-
         self.grid_data = np.zeros((GRID_SIZE, GRID_SIZE), dtype=np.uint8)
         self.last_draw_time = 0.0
         self.last_prediction: int | None = None
-
         self._build_ui()
         self._draw_grid()
 
@@ -90,10 +86,8 @@ class DigitDrawerApp:
             fg="#1a237e",
         )
         result_label.grid(row=3, column=0, columnspan=3, pady=(0, 4))
-
         correct_frame = tk.Frame(self.root)
         correct_frame.grid(row=4, column=0, columnspan=3, pady=(0, 10))
-
         tk.Label(correct_frame, text="Correct label (0–9):").pack(side=tk.LEFT)
         self.correct_var = tk.StringVar()
         correct_entry = tk.Entry(
@@ -154,7 +148,6 @@ class DigitDrawerApp:
     @staticmethod
     def _list_ports() -> list[str]:
         return [p.device for p in serial.tools.list_ports.comports()]
-
     def _refresh_ports(self) -> None:
         ports = self._list_ports()
         self.port_combo["values"] = ports
@@ -220,7 +213,6 @@ class DigitDrawerApp:
             messagebox.showwarning("Invalid input", "Enter a digit 0–9.")
             return
         label = int(raw)
-
         try:
             with self._open_serial() as ser:
                 time.sleep(0.05)
@@ -232,7 +224,6 @@ class DigitDrawerApp:
                 )
         except serial.SerialException as e:
             messagebox.showerror("Serial Error", str(e))
-
 
 if __name__ == "__main__":
     root = tk.Tk()
