@@ -1,4 +1,4 @@
-# OCR Number Classifier — ESP32 + TensorFlow Lite
+# OCR Number Classifier — ESP32 
 
 A hand-drawn digit recognition system. Draw a digit on a Python GUI, send it to an ESP32 microcontroller over USB serial, and get a real-time prediction back — with live correction support to improve accuracy on the fly.
 
