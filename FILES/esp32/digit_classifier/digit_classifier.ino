@@ -2,18 +2,15 @@
 #include "model_weights.h"
 
 static const int PIN_LED_BUILTIN = 2;
-
 static const int DIGIT_PINS[OUTPUT_SIZE] = {
   13, 12, 14, 27, 26, 25, 33, 32, 4, 5
 };
 
 static const int PIN_BTN_CONFIRM   = 18;
 static const int PIN_BTN_INCREMENT = 19;
-
 static const uint8_t CMD_INFER   = 0xFF;
 static const uint8_t CMD_CORRECT = 0xFE;
 static const float   LR          = 0.05f;
-
 static float   input_buf [INPUT_SIZE ];
 static float   hidden_buf[HIDDEN_SIZE];
 static float   output_buf[OUTPUT_SIZE];
