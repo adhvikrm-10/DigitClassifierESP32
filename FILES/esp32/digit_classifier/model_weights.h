@@ -1,6 +1,5 @@
 #pragma once
 #include <pgmspace.h>
-
 #define INPUT_SIZE   64
 #define HIDDEN_SIZE  64
 #define OUTPUT_SIZE  10
