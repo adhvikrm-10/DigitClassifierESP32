@@ -80,11 +80,9 @@ If the screen is blank, press the **EN/RST** button on the ESP32 once. You shoul
 ```
 ESP32 Perceptron Classifier ready.
 ```
-
-> ⚠️ Close the Serial Monitor before running the Python GUI — both cannot use the same port at the same time.
+>  Close the Serial Monitor before running the Python GUI — both cannot use the same port at the same time.
 
 ### Step 7 — Run the Python GUI
-
 ```bash
 cd src
 python drawing.py
@@ -93,7 +91,6 @@ python drawing.py
 ---
 
 ## How to Use the Classifier
-
 1. Select your COM port from the dropdown (e.g. `COM14`)
 2. Draw a digit (0–9) on the grid using your mouse — draw **small and centered**, not edge-to-edge
 3. Click **Send to ESP32**
@@ -102,7 +99,6 @@ python drawing.py
 ---
 
 ## How to Use the Correction Feature
-
 If the prediction is wrong:
 
 1. Type the correct digit in the **Correct label (0–9)** box
