@@ -21,10 +21,10 @@ A hand-drawn digit recognition system. Draw a digit on a Python GUI, send it to 
 
 **Software**
 ```bash
-pip install tensorflow scikit-learn matplotlib pyserial
+pip install numpy scikit-learn pyserial
 ```
 - Arduino IDE 2.x
-- ESP32 board support + TensorFlow Lite library installed in Arduino IDE
+- ESP32 board support installed in Arduino IDE
 
 ---
 
