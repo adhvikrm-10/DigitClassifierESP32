@@ -4,6 +4,7 @@ A hand-drawn digit recognition system. Draw a digit on a Python GUI, send it to 
 
 ---
 
+
 ## Features
 
 - On-device inference running entirely on the ESP32 (no cloud, no PC compute)
